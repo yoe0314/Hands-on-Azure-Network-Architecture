@@ -1,6 +1,7 @@
 
 # Hands-on : Azure Network Architecture
 ###### tags `Azure Network` `Workshop` `2022`
+[![hackmd-github-sync-badge](https://hackmd.io/-Y0NjGc3RgK2_UobhexsUg/badge)](https://hackmd.io/-Y0NjGc3RgK2_UobhexsUg)
 [toc]
 
 此Hands-on Lab用來實作一簡單Azure網路架構圖。包含兩個VNet，兩個VNet中各有兩個Subnet，Subnet包含的資源有：Stroage Account、Virtual Machine、NSG。
