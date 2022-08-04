@@ -2,20 +2,15 @@
 # Hands-on : Azure Network Architecture
 ###### tags `Azure Network` `Workshop` `2022`
 [![hackmd-github-sync-badge](https://hackmd.io/-Y0NjGc3RgK2_UobhexsUg/badge)](https://hackmd.io/-Y0NjGc3RgK2_UobhexsUg)
-[toc]
 
 此Hands-on Lab用來實作一簡單Azure網路架構圖。包含兩個VNet，兩個VNet中各有兩個Subnet，Subnet包含的資源有：Stroage Account、Virtual Machine、NSG。
-
-
-
 ## Prerequisites
 
 * Azure Subscription (Azure 訂用帳戶)
      * 需指派使用者為訂用帳戶中 Owner/Contributor 權限：[使用 Azure 入口網站指派 Azure 角色-Azure RBAC | Microsoft Docs (建議提供訂閱帳戶這層的權限而非單一資源群組)](https://docs.microsoft.com/zh-tw/azure/role-based-access-control/role-assignments-portal?tabs=current)。
 
-
 ## 1/ 基本介紹
-* 在此次練習中，將透過Azure Potal、Powershell逐步建立下方網路架構圖。![](https://i.imgur.com/gLIMAaM.png =70%x)
+* 在此次練習中，將透過Azure Potal、Powershell逐步建立下方網路架構圖。![](https://i.imgur.com/gLIMAaM.png)
 
     * 每個VNet都由自己的網路安全性群組(NSG)所防護。
     * 有一個服務端點(Service Endpoint)會把Storage Account連結至VNet。
@@ -37,7 +32,7 @@
 * 選擇欲使用的訂用帳戶，選擇要將接下來建立的資源放在哪個資源群組。
     * 為你的虛擬網路取名，並選擇要建立在哪個區域。
 
-![](https://i.imgur.com/vg61f0o.png =80%x)
+![](https://i.imgur.com/vg61f0o.png)
 
 :::success
 :bulb: **建議**：新建一個資源群組存放此次練習所建立的資源，方便後續刪除資源。
@@ -53,11 +48,11 @@
 * 新增子網路(Subnet)
     * 新增兩個Subnet，web1(10.1.1.0/24)、app1(10.1.2.0/24)。
 
-![](https://i.imgur.com/Pmm5aXb.png =40%x) ![](https://i.imgur.com/hhBrqDu.png =38%x)
+![](https://i.imgur.com/Pmm5aXb.png) ![](https://i.imgur.com/hhBrqDu.png)
 
 * 完成後畫面如下：
 
-![](https://i.imgur.com/Ch2igDw.png =90%x)
+![](https://i.imgur.com/Ch2igDw.png)
 * 後續`安全性`和`標籤`皆用預設即可，並點選建立。
 
 * 建立成功後，`前往資源`至虛擬網路->`圖表` 查看Azure提供的網路拓樸圖。
@@ -116,7 +111,7 @@ $subnetConfig2 | Set-AzVirtualNetwork
 
 * 建立完成後，可至虛擬網路`VNet2`，查看剛才用指令建立的結果。
 
-![](https://i.imgur.com/b7wbpzl.png =90%x)
+![](https://i.imgur.com/b7wbpzl.png)
 
 
 ## 4/ 建立NSG
@@ -129,7 +124,7 @@ $subnetConfig2 | Set-AzVirtualNetwork
 * 你可以為每個規則指定來源和目的地、連接埠及通訊協定。
 :::
 
-![](https://i.imgur.com/sDeSV5W.png =80%x)
+![](https://i.imgur.com/sDeSV5W.png)
 
 ### 設定輸入安全性規則
 * 若要建立NSG並允許對內的HTTP流量通過(80 TCP Port)。
@@ -212,12 +207,12 @@ $subnetConfig2 | Set-AzVirtualNetwork
 
 * 需要`新增您的用戶端IP`選項加入自己的IP，才能夠存取到儲存體帳戶，否則無法存取。
 
-![](https://i.imgur.com/86lDZ6r.png =70%x)
+![](https://i.imgur.com/86lDZ6r.png)
 
 
 * 用下面這個選項，就可以讓其他的Azure服務(像是Key Vault、Azure AD等)可以和這個儲存體帳戶雙向溝通。
 
-![](https://i.imgur.com/e8c6N2s.png =60%x)
+![](https://i.imgur.com/e8c6N2s.png)
 
 ## 6/ VNet Peering
 
@@ -239,8 +234,8 @@ $subnetConfig2 | Set-AzVirtualNetwork
 
 * 我們可以在`VNet1`和`VNet2`的`對等互連`頁面中看到Peering狀態。
 
-![](https://i.imgur.com/iUKtuWK.png =80%x)
-![](https://i.imgur.com/OrBygkq.png =80%x)
+![](https://i.imgur.com/iUKtuWK.png)
+![](https://i.imgur.com/OrBygkq.png)
 
 
 ## 7/ 建立虛擬機器
@@ -255,7 +250,7 @@ $subnetConfig2 | Set-AzVirtualNetwork
     * `大小`：選擇DS1_v2即可(待會只會登入進去看兩台VM的連線狀況，規格選擇最小的就好)。
     * Administrator帳戶設置(遠端登入所要使用的使用者名稱和密碼)。
 
-![](https://i.imgur.com/WbxVCgE.png =100%x)
+![](https://i.imgur.com/WbxVCgE.png)
 
 * `磁碟`預設即可
 
@@ -295,7 +290,7 @@ VM2，虛擬網路選擇VNet2，子網路選擇web2
 * `名稱`：輸入MYIP-In-Allow。
 * 點選新增。
 
-![](https://i.imgur.com/4Io3kcj.png =60%x)
+![](https://i.imgur.com/4Io3kcj.png)
 
 * 新增完後的畫面應如下：
 
@@ -308,7 +303,7 @@ VM2，虛擬網路選擇VNet2，子網路選擇web2
 * 點選`下載RDP檔案`來連線至VM1。
 * 輸入創建VM時的使用者名稱和密碼登入。
 
-![](https://i.imgur.com/dAcEsau.png =50%x)
+![](https://i.imgur.com/dAcEsau.png)
 
 
 ### 測試連線方法
@@ -323,14 +318,14 @@ VM2，虛擬網路選擇VNet2，子網路選擇web2
 ```powershell
 Test-NetConnection 10.2.1.4 -port 3389
 ```
-![](https://i.imgur.com/nTHUr5w.png =80%x)
+![](https://i.imgur.com/nTHUr5w.png)
 >VM1 Ping VM2成功 
 
 * PsPing
 ```PsPing
 psping 10.2.1.4:3389
 ```
-![](https://i.imgur.com/AiUH1FU.png =80%x)
+![](https://i.imgur.com/AiUH1FU.png)
 >VM1 Ping VM2成功 
 
 ### 測試 VM2 -> VM1連線
@@ -339,7 +334,7 @@ psping 10.2.1.4:3389
 ```powershell
 Test-NetConnection 10.1.1.4 -port 3389
 ```
-![](https://i.imgur.com/EnYaZNF.png =80%x)
+![](https://i.imgur.com/EnYaZNF.png)
 
 >VM2 Ping VM1成功 
 
@@ -347,7 +342,7 @@ Test-NetConnection 10.1.1.4 -port 3389
 ```PsPing
 psping 10.1.1.4:3389
 ```
-![](https://i.imgur.com/dUFwpM1.png =80%x)
+![](https://i.imgur.com/dUFwpM1.png)
 >VM2 Ping VM1成功
 
 * 經過我們驗證後，VM1和VM2可以互相連線，代表我們在先前做的**VNet Peering**是有效的，能讓VNet1和VNet2互相溝通。
