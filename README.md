@@ -2,7 +2,6 @@
 # Hands-on : Azure Network Architecture
 ###### tags `Azure Network` `Workshop` `2022`
 [![hackmd-github-sync-badge](https://hackmd.io/-Y0NjGc3RgK2_UobhexsUg/badge)](https://hackmd.io/-Y0NjGc3RgK2_UobhexsUg)
-
 - [Hands-on : Azure Network Architecture](#hands-on---azure-network-architecture)
   * [Prerequisites](#prerequisites)
   * [1/ 基本介紹](#1-基本介紹)
