@@ -367,5 +367,5 @@ psping 10.1.1.4:3389
 * [Azure 建立、變更或刪除服務端點](https://docs.microsoft.com/zh-tw/azure/virtual-network/virtual-network-service-endpoint-policies-portal)
 * [Azure 對等互連](https://docs.microsoft.com/zh-tw/azure/virtual-network/tutorial-connect-virtual-networks-portal)
 * [Azure 建立 Windows 虛擬機器](https://docs.microsoft.com/zh-tw/azure/virtual-machines/windows/quick-create-portal)
-* [Azure 連線至虛擬機器](Azure 入口網站中建立 Windows 虛擬機器)
+* [Azure 連線至虛擬機器](https://docs.microsoft.com/zh-tw/azure/virtual-machines/windows/quick-create-portal)
 * Microsoft Azure for Dummies, Warner, Timothy L.
