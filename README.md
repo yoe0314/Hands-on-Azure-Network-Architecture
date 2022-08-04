@@ -3,6 +3,8 @@
 ###### tags `Azure Network` `Workshop` `2022`
 [![hackmd-github-sync-badge](https://hackmd.io/-Y0NjGc3RgK2_UobhexsUg/badge)](https://hackmd.io/-Y0NjGc3RgK2_UobhexsUg)
 
+<small><i><a href='http://ecotrust-canada.github.io/markdown-toc/'>Table of contents generated with markdown-toc</a></i></small>
+
 此Hands-on Lab用來實作一簡單Azure網路架構圖。包含兩個VNet，兩個VNet中各有兩個Subnet，Subnet包含的資源有：Stroage Account、Virtual Machine、NSG。
 ## Prerequisites
 
