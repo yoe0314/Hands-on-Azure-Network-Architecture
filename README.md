@@ -10,7 +10,7 @@
      * 需指派使用者為訂用帳戶中 Owner/Contributor 權限：[使用 Azure 入口網站指派 Azure 角色-Azure RBAC | Microsoft Docs (建議提供訂閱帳戶這層的權限而非單一資源群組)](https://docs.microsoft.com/zh-tw/azure/role-based-access-control/role-assignments-portal?tabs=current)。
 
 ## 1/ 基本介紹
-* 在此次練習中，將透過Azure Potal、Powershell逐步建立下方網路架構圖。![](https://i.imgur.com/gLIMAaM.png)
+* 在此次練習中，將透過Azure Potal、Powershell逐步建立下方網路架構圖。![](https://i.imgur.com/4mxQrbH.png)
 
     * 每個VNet都由自己的網路安全性群組(NSG)所防護。
     * 有一個服務端點(Service Endpoint)會把Storage Account連結至VNet。
