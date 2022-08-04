@@ -3,7 +3,31 @@
 ###### tags `Azure Network` `Workshop` `2022`
 [![hackmd-github-sync-badge](https://hackmd.io/-Y0NjGc3RgK2_UobhexsUg/badge)](https://hackmd.io/-Y0NjGc3RgK2_UobhexsUg)
 
-<small><i><a href='http://ecotrust-canada.github.io/markdown-toc/'>Table of contents generated with markdown-toc</a></i></small>
+- [Hands-on : Azure Network Architecture](#hands-on---azure-network-architecture)
+  * [Prerequisites](#prerequisites)
+  * [1/ 基本介紹](#1-基本介紹)
+  * [2/ 建立虛擬網路](#2-建立虛擬網路)
+    + [建立VNet](#建立vnet)
+    + [建立Subnet](#建立subnet)
+  * [3/ Powershell部署](#3-powershell部署)
+    + [Cloud Shell](#cloud-shell)
+  * [4/ 建立NSG](#4-建立nsg)
+    + [設定輸入安全性規則](#設定輸入安全性規則)
+    + [NSG與Subnet結合](#nsg與subnet結合)
+  * [5/ 服務端點-Service Endpoints](#5-服務端點-service-endpoints)
+    + [建立Service Endpoint](#建立service-endpoint)
+  * [6/ VNet Peering](#6-vnet-peering)
+    + [新增對等互連](#新增對等互連)
+  * [7/ 建立虛擬機器](#7-建立虛擬機器)
+    + [建立兩台創虛擬機器-VM1、VM2](#建立兩台創虛擬機器-vm1vm2)
+    + [網路配置](#網路配置)
+  * [8/ 遠端連線測試](#8-遠端連線測試)
+    + [新增自身IP](#新增自身ip)
+    + [測試連線方法](#測試連線方法)
+    + [測試 VM1 -> VM2連線](#測試-vm1---vm2連線)
+    + [測試 VM2 -> VM1連線](#測試-vm2---vm1連線)
+  * [9/ 刪除資源](#9-刪除資源)
+  * [Reference](#reference)
 
 此Hands-on Lab用來實作一簡單Azure網路架構圖。包含兩個VNet，兩個VNet中各有兩個Subnet，Subnet包含的資源有：Stroage Account、Virtual Machine、NSG。
 ## Prerequisites
