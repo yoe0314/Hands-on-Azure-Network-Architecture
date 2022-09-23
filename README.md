@@ -28,7 +28,7 @@
   * [9/ 刪除資源](#9-刪除資源)
   * [Reference](#reference)
 
-此Hands-on Lab用來實作一簡單Azure網路架構圖。包含兩個VNet，兩個VNet中各有兩個Subnet，Subnet包含的資源有：Stroage Account、Virtual Machine、NSG。
+此Hands-on Lab用來實作一簡單Azure網路架構圖。包含兩個VNet，兩個VNet中各有兩個Subnet，Subnet包含的資源有：Storage Account、Virtual Machine、NSG。
 ## Prerequisites
 
 * Azure Subscription (Azure 訂用帳戶)
